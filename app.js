@@ -209,6 +209,8 @@ function initOpenInvitation() {
   btnOpen.addEventListener('click', (e) => {
     e.preventDefault();
 
+    document.body.classList.add('invitation-opened');
+
     launchHeartConfetti();
 
     if (mainContent) {

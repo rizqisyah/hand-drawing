@@ -45,6 +45,7 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -55,6 +56,13 @@ body {
     radial-gradient(#d3cbbe 1px, #e5e0dc 1px);
   background-size: 24px 24px;
   background-position: 0 0, 12px 12px;
+}
+
+body:not(.invitation-opened) {
+  overflow: hidden;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
 }
 
 /* Confetti & Particle Canvas */
@@ -383,36 +391,44 @@ body {
    ========================================================================== */
 
 #cover-section {
-  min-height: 100vh;
-  padding: 3rem 1.5rem 2.5rem;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
+  padding: clamp(0.75rem, 2vh, 1.25rem) 1.25rem clamp(0.75rem, 2vh, 1.25rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   position: relative;
   background-color: var(--bg-paper);
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .cover-header {
   position: relative;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .cover-tagline {
   font-family: var(--font-marker);
-  font-size: 2.5rem;
+  font-size: clamp(1.4rem, 3.6vh, 2.2rem);
   color: var(--primary-red);
-  line-height: 1.15;
+  line-height: 1.08;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-shadow: 1px 1px 0px rgba(0,0,0,0.05);
-  min-height: 130px;
+  min-height: unset;
 }
 
 .cover-tagline .highlight {
   display: block;
-  font-size: 3.2rem;
+  font-size: clamp(1.8rem, 4.6vh, 2.8rem);
   color: var(--dark-red);
   position: relative;
 }
@@ -420,29 +436,33 @@ body {
 /* Polaroid Photo Frame with Physical Swing Animation */
 .polaroid-container {
   position: relative;
-  margin: 1.5rem 0;
+  margin: 0.2rem 0;
   transform: rotate(-2.5deg);
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation: dropPolaroid 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 1;
 }
 
 @keyframes dropPolaroid {
-  0% { opacity: 0; transform: translateY(-50px) rotate(8deg) scale(0.9); }
-  70% { transform: translateY(5px) rotate(-4deg) scale(1.02); }
+  0% { opacity: 0; transform: translateY(-30px) rotate(8deg) scale(0.9); }
+  70% { transform: translateY(4px) rotate(-4deg) scale(1.02); }
   100% { opacity: 1; transform: translateY(0) rotate(-2.5deg) scale(1); }
 }
 
 .polaroid-container:hover {
-  transform: rotate(0deg) scale(1.03);
+  transform: rotate(0deg) scale(1.02);
 }
 
 .washi-tape {
   position: absolute;
-  top: -12px;
+  top: -10px;
   left: 50%;
   transform: translateX(-50%) rotate(2deg);
-  width: 90px;
-  height: 26px;
+  width: 75px;
+  height: 22px;
   background: var(--tape-color);
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   z-index: 10;
@@ -452,17 +472,19 @@ body {
 
 .polaroid-frame {
   background: #ffffff;
-  padding: 12px 12px 28px 12px;
+  padding: 8px 8px 18px 8px;
   border-radius: 4px;
-  box-shadow: 0 12px 25px rgba(130, 14, 3, 0.12), 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 22px rgba(130, 14, 3, 0.12), 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid rgba(158, 14, 0, 0.15);
-  max-width: 290px;
+  width: clamp(170px, 42vw, 240px);
+  max-width: 240px;
   position: relative;
 }
 
 .polaroid-img {
   width: 100%;
   aspect-ratio: 1/1;
+  max-height: clamp(130px, 26vh, 195px);
   object-fit: cover;
   border-radius: 2px;
   display: block;
@@ -477,63 +499,89 @@ body {
 .polaroid-caption {
   font-family: var(--font-marker);
   color: var(--text-main);
-  font-size: 1.5rem;
-  margin-top: 10px;
+  font-size: clamp(1.05rem, 2.4vh, 1.35rem);
+  margin-top: 6px;
   text-align: center;
   letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+/* Cover Bottom Wrapper */
+.cover-bottom-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  gap: clamp(4px, 1vh, 8px);
 }
 
 .cover-date-badge {
   font-family: var(--font-marker);
-  font-size: 1.7rem;
+  font-size: clamp(1.2rem, 2.6vh, 1.55rem);
   color: var(--text-main);
   letter-spacing: 2px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+.guest-pill {
+  background: rgba(158, 14, 0, 0.08);
+  border: 1.5px dashed var(--primary-red);
+  padding: clamp(4px, 0.8vh, 6px) clamp(12px, 3vw, 18px);
+  border-radius: 20px;
+  font-family: var(--font-sans);
+  font-size: clamp(0.75rem, 1.6vh, 0.85rem);
+  color: var(--dark-red);
+  margin-bottom: 0;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.guest-name {
+  font-weight: 700;
+  color: var(--primary-red);
+}
+
+.cover-tap-guide {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 0;
+  font-family: var(--font-hand);
+  font-size: clamp(0.95rem, 2vh, 1.15rem);
+  color: var(--dark-red);
+  font-weight: 700;
+  line-height: 1;
 }
 
 .btn-open-invitation {
   background-color: var(--dark-red);
   color: #ffffff;
   border: 2px solid var(--dark-red);
-  padding: 0.85rem 2.2rem;
+  padding: clamp(0.55rem, 1.5vh, 0.75rem) clamp(1.3rem, 4vw, 1.8rem);
   border-radius: 50px;
   font-family: var(--font-marker);
-  font-size: 1.15rem;
+  font-size: clamp(0.95rem, 2.2vh, 1.1rem);
   cursor: pointer;
   box-shadow: 0 6px 18px rgba(130, 14, 3, 0.35);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   text-decoration: none;
   animation: pulseButton 2.2s infinite ease-in-out;
 }
 
 .btn-open-invitation:hover {
   background-color: var(--primary-red);
-  transform: translateY(-3px) scale(1.05);
+  transform: translateY(-2px) scale(1.04);
   box-shadow: 0 10px 25px rgba(130, 14, 3, 0.5);
 }
 
 @keyframes pulseButton {
   0%, 100% { transform: scale(1); box-shadow: 0 6px 18px rgba(130, 14, 3, 0.35); }
-  50% { transform: scale(1.04); box-shadow: 0 10px 24px rgba(130, 14, 3, 0.5); }
-}
-
-.guest-pill {
-  background: rgba(158, 14, 0, 0.08);
-  border: 1.5px dashed var(--primary-red);
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  color: var(--dark-red);
-  margin-bottom: 1.2rem;
-}
-
-.guest-name {
-  font-weight: 700;
-  color: var(--primary-red);
+  50% { transform: scale(1.03); box-shadow: 0 10px 24px rgba(130, 14, 3, 0.5); }
 }
 
 /* ==========================================================================
