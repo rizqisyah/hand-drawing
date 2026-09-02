@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Julian & Anisa Wedding Invitation — 6.6.26</title>
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Julian + Anisa Wedding Invitation">
+  <meta property="og:description" content="these kids are getting MARRIED — 6.6.26">
+  <meta property="og:image" content="assets/images/og_banner.jpg">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="_assets/images/2f8d18e48f12d38f020db888557ed804.png">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <div id="app-container">
+    <div class="paper-texture"></div>
+
+    <!-- =========================================================================
+         1. COVER / LOCK SCREEN SECTION
+         ========================================================================= -->
+    <section id="cover-section">
+      <!-- Decorative Doodles with Animations -->
+      <svg class="doodle-ring doodle-animated-sparkle" style="top: 20px; left: 16px; width: 48px; height: 48px;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5">
+        <circle cx="50" cy="65" r="28"/>
+        <polygon points="50,15 35,35 65,35" stroke-width="4" fill="none"/>
+        <line x1="30" y1="15" x2="20" y2="5" stroke-width="4"/>
+        <line x1="70" y1="15" x2="80" y2="5" stroke-width="4"/>
+        <line x1="50" y1="8" x2="50" y2="0" stroke-width="4"/>
+      </svg>
+
+      <svg class="doodle-bow doodle-animated-float" style="top: 75px; right: 18px; width: 52px; height: 52px;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5">
+        <path d="M50 50 C25 20 10 60 50 50 C90 60 75 20 50 50 Z" fill="rgba(158,14,0,0.12)"/>
+        <path d="M50 50 Q35 75 30 90 M50 50 Q65 75 70 90" stroke-width="4"/>
+        <circle cx="50" cy="50" r="6" fill="currentColor"/>
+      </svg>
+
+      <!-- Cute Speech Bubble -->
+      <div class="cute-speech-bubble" style="top: 15px; right: 25px;">
+        Finally tying the knot! 💍
+      </div>
+
+      <div class="cover-header">
+        <h1 id="cover-main-title" class="cover-tagline kinetic-title">these kids<br>are getting<br><span class="highlight">MARRIED</span></h1>
+      </div>
+
+      <!-- Polaroid Photo with Physical Drop & Stickers -->
+      <div class="polaroid-container">
+        <div class="washi-tape"></div>
+        
+        <!-- Cute Stamp Badge on Polaroid -->
+        <div class="postage-stamp doodle-animated-wiggle" style="top: -10px; right: -15px; transform: rotate(12deg);">
+          <span>★ OFFICIAL ★</span>
+          <span style="font-size: 0.8rem; font-weight: 700;">6.6.26</span>
+          <span>WITH LOVE</span>
+        </div>
+
+        <div class="polaroid-frame">
+          <img src="assets/images/couple.jpg" alt="Julian and Anisa" class="polaroid-img">
+          <div class="polaroid-caption kinetic-title">Julian + Anisa</div>
+        </div>
+
+        <div class="doodle-badge tilt-left" style="bottom: 8px; left: -14px;">
+          <span>✨</span> Best Chapter Ever
+        </div>
+      </div>
+
+      <!-- Personalized Guest Badge & Open Button -->
+      <div style="display: flex; flex-direction: column; align-items: center; width: 100%; position: relative;">
+        <div class="cover-date-badge kinetic-title">6.6.26</div>
+
+        <div class="guest-pill anim-rise delay-4">
+          Kepada Yth. <span id="guest-display-name" class="guest-name">Tamu Undangan</span>
+        </div>
+
+        <!-- Cute Arrow doodle pointing to Open Invitation -->
+        <div class="doodle-animated-float" style="display: flex; align-items: center; gap: 6px; margin-bottom: 8px; font-family: var(--font-hand); font-size: 1.25rem; color: var(--dark-red); font-weight: 700;">
+          <span>tap to open</span>
+          <svg style="width: 22px; height: 22px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 4v14M5 12l7 7 7-7"/>
+          </svg>
+        </div>
+
+        <a href="#quote-section" id="btn-open-invitation" class="btn-open-invitation anim-pop delay-5">
+          <span>💌</span> Open Invitation
+        </a>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         MAIN INVITATION CONTENT (Revealed on Open)
+         ========================================================================= -->
+    <main id="main-content" class="hidden">
+
+      <!-- =======================================================================
+           2. QURANIC QUOTE (AR-RUM 21) & MUSIC SECTION
+           ======================================================================= -->
+      <section id="quote-section">
+        <!-- Cute floating love doodle -->
+        <svg class="doodle-animated-float" style="width: 42px; height: 42px; margin-bottom: 0.5rem;" viewBox="0 0 100 100" fill="none" stroke="var(--primary-red)" stroke-width="4">
+          <path d="M50 30 C50 15, 30 10, 20 25 C10 40, 25 60, 50 85 C75 60, 90 40, 80 25 C70 10, 50 15, 50 30 Z" fill="rgba(158,14,0,0.1)"/>
+        </svg>
+
+        <div class="section-title handwritten kinetic-title">save the date!</div>
+
+        <div class="quote-card scroll-reveal-zoom">
+          <!-- Sparkle Doodle -->
+          <svg class="doodle-sparkle" style="top: -15px; right: -10px; width: 32px; height: 32px;" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M50 0 L58 42 L100 50 L58 58 L50 100 L42 58 L0 50 L42 42 Z"/>
+          </svg>
+
+          <!-- Cute Flower Corner Doodles -->
+          <svg style="position: absolute; bottom: 8px; left: 10px; width: 28px; height: 28px; color: var(--primary-red);" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4">
+            <circle cx="50" cy="50" r="15" fill="rgba(158,14,0,0.2)"/>
+            <circle cx="50" cy="20" r="12" fill="none"/>
+            <circle cx="50" cy="80" r="12" fill="none"/>
+            <circle cx="20" cy="50" r="12" fill="none"/>
+            <circle cx="80" cy="50" r="12" fill="none"/>
+          </svg>
+
+          <div class="quote-text">
+            “Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”
+          </div>
+          <div class="quote-surah kinetic-subtitle">— QS Ar-Rum: 21 —</div>
+        </div>
+
+        <div class="kinetic-title" style="font-family: var(--font-marker); color: var(--primary-red); font-size: 2.2rem; margin-top: 2rem;">
+          Julian + Anisa
+        </div>
+
+        <!-- Interactive Music Card with Vinyl Animation -->
+        <div class="music-player-card scroll-reveal">
+          <div class="music-vinyl">
+            <div class="vinyl-center"></div>
+          </div>
+          <div class="music-info">
+            <div class="music-title">A Thousand Years / Wedding Song</div>
+            <div class="music-subtitle kinetic-subtitle">Klik tombol untuk mendengarkan musik..</div>
+            <div class="equalizer-bars">
+              <div class="eq-bar"></div>
+              <div class="eq-bar"></div>
+              <div class="eq-bar"></div>
+              <div class="eq-bar"></div>
+            </div>
+          </div>
+          <button type="button" class="btn-music-toggle js-music-toggle" aria-label="Toggle Music">▶</button>
+        </div>
+
+        <!-- Embedded Audio Element -->
+        <audio id="bg-music-audio" loop preload="auto">
+          <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=acoustic-guitar-loop-f-91bpm-112028.mp3" type="audio/mpeg">
+        </audio>
+      </section>
+
+
+      <!-- =======================================================================
+           3. BRIDE & GROOM SECTION (MEMPELAI)
+           ======================================================================= -->
+      <section id="bride-groom-section">
+        <!-- Cute Love Birds Doodle -->
+        <div class="doodle-animated-float" style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 0.5rem;">
+          <svg style="width: 36px; height: 36px; color: var(--primary-red);" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4">
+            <path d="M10 60 C10 40, 30 30, 50 40 C70 20, 85 40, 75 60 C65 75, 30 75, 10 60 Z"/>
+            <circle cx="65" cy="42" r="3" fill="currentColor"/>
+            <path d="M75 45 L90 48 L75 52 Z" fill="currentColor"/>
+          </svg>
+          <span style="font-size: 1.4rem; color: var(--primary-red);">❤️</span>
+          <svg style="width: 36px; height: 36px; color: var(--primary-red); transform: scaleX(-1);" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4">
+            <path d="M10 60 C10 40, 30 30, 50 40 C70 20, 85 40, 75 60 C65 75, 30 75, 10 60 Z"/>
+            <circle cx="65" cy="42" r="3" fill="currentColor"/>
+            <path d="M75 45 L90 48 L75 52 Z" fill="currentColor"/>
+          </svg>
+        </div>
+
+        <div class="section-title kinetic-title">Bride & Groom</div>
+
+        <div class="couple-greeting scroll-reveal">
+          <strong class="kinetic-title" style="font-size: 1.15rem; color: var(--dark-red); display: block; margin-bottom: 0.5rem;">Assalamu'alaikum Warahmatullahi Wabarakatuh</strong>
+          <span class="kinetic-subtitle">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri pernikahan kami:</span>
+        </div>
+
+        <div class="couple-cards-container">
+          <!-- The Bride -->
+          <div class="person-card scroll-reveal-left">
+            <div class="doodle-badge tilt-right" style="top: -12px; right: -8px;">
+              🌸 The Bride
+            </div>
+            <div class="arch-frame">
+              <img src="assets/images/bride.jpg" alt="Anisa - The Bride">
+            </div>
+            <div class="person-name kinetic-title">Anisa</div>
+            <div class="person-fullname kinetic-subtitle">Anisa Rahmawati, S.Ked</div>
+            <div class="person-parents kinetic-subtitle">
+              Putri tercinta dari Bapak Bambang H. &amp; Ibu Siti Aminah
+            </div>
+          </div>
+
+          <!-- Ampersand with Cupid Arrow Doodle -->
+          <div class="couple-ampersand scroll-reveal-zoom" style="position: relative;">
+            <svg class="doodle-animated-wiggle" style="position: absolute; width: 64px; height: 64px; color: var(--primary-red); opacity: 0.25;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4">
+              <path d="M20 20 L80 80 M70 80 L80 80 L80 70"/>
+            </svg>
+            <span>&</span>
+          </div>
+
+          <!-- The Groom -->
+          <div class="person-card scroll-reveal-right">
+            <div class="doodle-badge tilt-left" style="top: -12px; left: -8px;">
+              🤵🏻 The Groom
+            </div>
+            <div class="arch-frame">
+              <img src="assets/images/groom.jpg" alt="Julian - The Groom">
+            </div>
+            <div class="person-name kinetic-title">Julian</div>
+            <div class="person-fullname kinetic-subtitle">Julian Pratama, S.T</div>
+            <div class="person-parents kinetic-subtitle">
+              Putra tercinta dari Bapak Hendra Wijaya &amp; Ibu Rina Marlina
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =======================================================================
+           4. SAVE THE DATE & EVENTS (AKAD & RESEPSI)
+           ======================================================================= -->
+      <section id="events-section">
+        <!-- Cute Alarm Clock Doodle -->
+        <svg class="doodle-animated-wiggle" style="width: 38px; height: 38px; color: var(--primary-red); margin-bottom: 0.4rem;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4">
+          <circle cx="50" cy="55" r="35"/>
+          <line x1="50" y1="55" x2="50" y2="35" stroke-width="4"/>
+          <line x1="50" y1="55" x2="68" y2="55" stroke-width="4"/>
+          <path d="M20 25 L35 15 M80 25 L65 15"/>
+          <line x1="30" y1="90" x2="20" y2="98" stroke-width="4"/>
+          <line x1="70" y1="90" x2="80" y2="98" stroke-width="4"/>
+        </svg>
+
+        <div class="section-title kinetic-title">Save The Date!</div>
+        <div class="section-subtitle kinetic-subtitle">Tandai kalender Anda untuk hari bahagia kami</div>
+
+        <!-- Hand-drawn Mini Calendar -->
+        <div class="calendar-widget scroll-reveal-zoom">
+          <div class="cal-day">
+            <div class="cal-day-name">Jumat</div>
+            <div class="cal-day-number">5</div>
+            <div style="font-size: 0.75rem; color: #888;">Juni 2026</div>
+          </div>
+          <div class="cal-day active">
+            <div class="cal-dday-tag">D-day !!</div>
+            <div class="cal-day-name">Sabtu</div>
+            <div class="cal-day-number">6</div>
+            <div style="font-size: 0.75rem; font-weight: 700;">Juni 2026</div>
+          </div>
+          <div class="cal-day">
+            <div class="cal-day-name">Minggu</div>
+            <div class="cal-day-number">7</div>
+            <div style="font-size: 0.75rem; color: #888;">Juni 2026</div>
+          </div>
+        </div>
+
+        <!-- Akad Card -->
+        <div class="event-card scroll-reveal">
+          <div class="doodle-badge tilt-left" style="top: -10px; right: 15px;">
+            💍 Ijab Qabul
+          </div>
+          <div class="event-type kinetic-title">Akad Nikah</div>
+          <div class="event-date kinetic-subtitle">Sabtu, 6 Juni 2026</div>
+          <div class="event-time">⏰ 16.00 WIB</div>
+          <div class="event-venue-name kinetic-subtitle">KUA Mampang Prapatan</div>
+          <div class="event-address">
+            Jl. Mampang Prapatan IV No.18, RT.3/RW.5, Mampang Prpt., Kota Jakarta Selatan
+          </div>
+          <a href="https://maps.app.goo.gl/FqZ6fCKiS9fYgN9K7" target="_blank" rel="noopener noreferrer" class="btn-location">
+            📍 Lihat Lokasi Akad
+          </a>
+        </div>
+
+        <!-- Resepsi Card -->
+        <div class="event-card scroll-reveal">
+          <div class="doodle-badge tilt-right" style="top: -10px; left: 15px;">
+            🎉 Celebration Party
+          </div>
+          <div class="event-type kinetic-title">Resepsi Pernikahan</div>
+          <div class="event-date kinetic-subtitle">Sabtu, 6 Juni 2026</div>
+          <div class="event-time">⏰ 19.00 WIB - Selesai</div>
+          <div class="event-venue-name kinetic-subtitle">Kopi Kina Kemang</div>
+          <div class="event-address">
+            Jl. Kemang Timur No.89, RT.1/RW.3, Bangka, Kec. Mampang Prpt., Kota Jakarta Selatan, DKI Jakarta 12730
+          </div>
+          <a href="https://maps.app.goo.gl/FqZ6fCKiS9fYgN9K7" target="_blank" rel="noopener noreferrer" class="btn-location">
+            📍 Buka di Google Maps
+          </a>
+        </div>
+
+        <!-- Cute Just Married Car Doodle -->
+        <div class="doodle-animated-float" style="margin: 0.5rem 0 1rem;">
+          <svg style="width: 140px; height: 50px; color: var(--primary-red);" viewBox="0 0 140 50" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M15 35 Q25 15 45 15 L85 15 Q105 15 115 35 Z" fill="rgba(158,14,0,0.08)"/>
+            <path d="M10 35 L125 35 L125 40 L10 40 Z"/>
+            <circle cx="35" cy="40" r="7" fill="#ffffff" stroke="currentColor" stroke-width="3"/>
+            <circle cx="100" cy="40" r="7" fill="#ffffff" stroke="currentColor" stroke-width="3"/>
+            <path d="M45 15 L45 35 M85 15 L85 35"/>
+            <text x="65" y="30" font-size="8" font-family="sans-serif" font-weight="bold" fill="currentColor" text-anchor="middle">JUST MARRIED</text>
+            <path d="M125 38 Q135 42 140 45" stroke-dasharray="2 2"/>
+          </svg>
+        </div>
+
+        <!-- Add to Google Calendar -->
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Julian+%26+Anisa&dates=20260606T090000Z/20260606T150000Z&details=Pernikahan+Julian+%2B+Anisa+di+Kopi+Kina+Kemang&location=Kopi+Kina+Kemang" target="_blank" rel="noopener noreferrer" class="btn-calendar scroll-reveal">
+          📅 Simpan ke Google Calendar
+        </a>
+      </section>
+
+
+      <!-- =======================================================================
+           5. LOVE STORY SECTION
+           ======================================================================= -->
+      <section id="story-section">
+        <!-- Cute Book / Diary Doodle -->
+        <svg class="doodle-animated-wiggle" style="width: 38px; height: 38px; color: var(--primary-red); margin-bottom: 0.4rem;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4">
+          <path d="M50 25 C35 15 15 15 10 25 L10 80 C20 70 35 70 50 80 C65 70 80 70 90 80 L90 25 C85 15 65 15 50 25 Z" fill="rgba(158,14,0,0.08)"/>
+          <line x1="50" y1="25" x2="50" y2="80"/>
+        </svg>
+
+        <div class="section-title kinetic-title">Love Story</div>
+        <div class="section-subtitle kinetic-subtitle">Kisah perjalanan kami merajut rasa</div>
+
+        <div class="story-timeline">
+          <!-- Step 1 -->
+          <div class="story-step scroll-reveal">
+            <div class="doodle-badge tilt-left" style="top: -10px; right: 10px;">
+              ☕ Chapter 1
+            </div>
+            <div class="story-title kinetic-title">1. Awal Pertemuan</div>
+            <div class="story-body">
+              Tidak ada yang benar-benar kebetulan di dunia ini. Setiap pertemuan telah diatur dengan indah, hanya menunggu waktu yang tepat untuk terjadi. Berawal dari sebuah perkenalan sederhana, tanpa banyak rencana atau harapan berlebihan, kami dipertemukan dalam cara yang tidak pernah kami duga sebelumnya.
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="story-step scroll-reveal">
+            <div class="doodle-badge tilt-right" style="top: -10px; right: 10px;">
+              🍿 Chapter 2
+            </div>
+            <div class="story-title kinetic-title">2. Perjalanan Bersama</div>
+            <div class="story-body">
+              Seiring berjalannya waktu, kebersamaan kecil yang kami lalui perlahan tumbuh menjadi sesuatu yang lebih berarti. Dalam setiap cerita, tentu ada tawa, ada juga tantangan. Namun dari situlah kami belajar untuk saling memahami, menerima, dan melengkapi satu sama lain.
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="story-step scroll-reveal">
+            <div class="doodle-badge tilt-left" style="top: -10px; right: 10px;">
+              💍 Chapter 3
+            </div>
+            <div class="story-title kinetic-title">3. Komitmen</div>
+            <div class="story-body">
+              Hingga akhirnya kami menyadari bahwa perjalanan ini bukan lagi tentang dua orang yang berjalan sendiri, melainkan tentang dua hati yang memilih untuk melangkah bersama. Dengan penuh rasa syukur dan keyakinan, kami memutuskan untuk mengikat janji suci dan memulai babak baru dalam kehidupan kami.
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =======================================================================
+           6. WEDDING GIFT SECTION (AMPLOP DIGITAL)
+           ======================================================================= -->
+      <section id="gift-section">
+        <!-- Cute Gift Box Doodle -->
+        <svg class="doodle-animated-float" style="width: 42px; height: 42px; color: var(--primary-red); margin-bottom: 0.4rem;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4">
+          <rect x="20" y="45" width="60" height="45" rx="4" fill="rgba(158,14,0,0.08)"/>
+          <rect x="15" y="32" width="70" height="15" rx="3" fill="rgba(158,14,0,0.15)"/>
+          <line x1="50" y1="32" x2="50" y2="90" stroke-width="4"/>
+          <path d="M50 32 C35 15, 20 25, 45 32 C65 25, 50 15, 50 32 Z" stroke-width="4"/>
+        </svg>
+
+        <div class="section-title kinetic-title">Wedding Gift</div>
+
+        <div class="gift-intro kinetic-subtitle">
+          Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah ungkapan tanda kasih, Anda dapat mengirimkan kado melalui rekening berikut:
+        </div>
+
+        <!-- Bank Card 1 (BCA) -->
+        <div class="bank-card scroll-reveal">
+          <div class="doodle-badge tilt-right" style="top: -10px; right: 15px;">
+            <svg style="width: 14px; height: 14px; vertical-align: -2px; margin-right: 4px; display: inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+            Digital Envelope
+          </div>
+          <div class="bank-logo-row">
+            <div class="bank-name-badge">BCA</div>
+            <div class="chip-icon"></div>
+          </div>
+          <div class="account-number">1122334455</div>
+          <div class="account-holder kinetic-subtitle">Account name: Julian Pratama</div>
+          <button type="button" class="btn-copy" data-copy="1122334455">
+            <svg style="width: 15px; height: 15px; vertical-align: -2px; margin-right: 5px; display: inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            Salin Nomor Rekening
+          </button>
+        </div>
+
+        <!-- Bank Card 2 (Mandiri / Bank Lain) -->
+        <div class="bank-card scroll-reveal">
+          <div class="doodle-badge tilt-left" style="top: -10px; right: 15px;">
+            <svg style="width: 14px; height: 14px; vertical-align: -2px; margin-right: 4px; display: inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+            Digital Envelope
+          </div>
+          <div class="bank-logo-row">
+            <div class="bank-name-badge">MANDIRI</div>
+            <div class="chip-icon"></div>
+          </div>
+          <div class="account-number">1122334455</div>
+          <div class="account-holder kinetic-subtitle">Account name: Anisa Rahmawati</div>
+          <button type="button" class="btn-copy" data-copy="1122334455">
+            <svg style="width: 15px; height: 15px; vertical-align: -2px; margin-right: 5px; display: inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            Salin Nomor Rekening
+          </button>
+        </div>
+
+        <!-- Physical Gift Box -->
+        <div class="physical-gift-box scroll-reveal" style="position: relative;">
+          <!-- Hand-drawn Cute Parcel Doodle -->
+          <svg class="doodle-animated-float" style="width: 46px; height: 46px; color: var(--accent-green); margin-bottom: 0.4rem;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="22" y="42" width="56" height="46" rx="6" fill="rgba(76, 88, 58, 0.08)"/>
+            <rect x="16" y="30" width="68" height="15" rx="4" fill="rgba(76, 88, 58, 0.16)"/>
+            <line x1="50" y1="30" x2="50" y2="88" stroke-width="4"/>
+            <path d="M50 30 C34 12, 18 22, 46 30 C66 22, 50 12, 50 30 Z" fill="rgba(76, 88, 58, 0.22)" stroke-width="4"/>
+          </svg>
+
+          <div class="physical-gift-title kinetic-title">
+            <svg style="width: 20px; height: 20px; vertical-align: -3px; margin-right: 4px; display: inline-block;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="8" width="18" height="13" rx="2"></rect>
+              <path d="M12 8v13"></path>
+              <path d="M3 12h18"></path>
+              <path d="M12 8c-2.5-3-6-2-4 1 2 2 4 1 4 1z"></path>
+              <path d="M12 8c2.5-3 6-2 4 1-2 2-4 1-4 1z"></path>
+            </svg>
+            Kado Fisik
+          </div>
+
+          <p class="kinetic-subtitle" style="font-size: 0.9rem; color: var(--text-main); margin-bottom: 0.6rem; text-align: center;">
+            Dan bisa mengirimkan hadiah dalam bentuk fisik melalui konfirmasi ke nomor berikut:
+          </p>
+
+          <a href="https://wa.me/6281234567890?text=Halo%20Julian%20%26%20Anisa,%20saya%20ingin%20mengirimkan%20kado%20fisik%20pernikahan" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+            <svg style="width: 20px; height: 20px; flex-shrink: 0; fill: currentColor;" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            Konfirmasi via WhatsApp
+          </a>
+        </div>
+      </section>
+
+
+      <!-- =======================================================================
+           7. RSVP & GUESTBOOK (UCAPAN DAN KEHADIRAN)
+           ======================================================================= -->
+      <section id="rsvp-section">
+        <!-- Cute Pencil Doodle -->
+        <svg class="doodle-animated-wiggle" style="width: 36px; height: 36px; color: var(--primary-red); margin-bottom: 0.4rem;" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4">
+          <path d="M20 80 L25 55 L70 10 L90 30 L45 75 Z" fill="rgba(158,14,0,0.08)"/>
+          <polygon points="20,80 15,85 25,85" fill="currentColor"/>
+        </svg>
+
+        <div class="section-title kinetic-title">Ucapan & Kehadiran</div>
+        <div class="section-subtitle kinetic-subtitle">Berikan doa dan ucapan terbaik untuk kami</div>
+
+        <div class="guestbook-card scroll-reveal">
+          <form id="rsvp-form">
+            <div class="form-group">
+              <label for="rsvp-name" class="form-label">Nama Anda</label>
+              <input type="text" id="rsvp-name" class="form-input" placeholder="Contoh: Sarah & Dimas" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Konfirmasi Kehadiran</label>
+              <div class="radio-pills">
+                <input type="radio" name="attendance" id="att-yes" value="Hadir" class="radio-pill-input" checked>
+                <label for="att-yes" class="radio-pill-label">✓ Hadir</label>
+
+                <input type="radio" name="attendance" id="att-maybe" value="Masih Ragu" class="radio-pill-input">
+                <label for="att-maybe" class="radio-pill-label">? Masih Ragu</label>
+
+                <input type="radio" name="attendance" id="att-no" value="Tidak Hadir" class="radio-pill-input">
+                <label for="att-no" class="radio-pill-label">✕ Berhalangan</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvp-guests" class="form-label">Jumlah Tamu</label>
+              <select id="rsvp-guests" class="form-select">
+                <option value="1">1 Orang</option>
+                <option value="2">2 Orang</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvp-message" class="form-label">Ucapan & Doa</label>
+              <textarea id="rsvp-message" class="form-textarea" placeholder="Tuliskan ucapan dan doa terbaik Anda..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-wish">
+              💌 Kirim Ucapan & RSVP
+            </button>
+          </form>
+
+          <!-- Wishes Feed -->
+          <div class="wishes-feed-container">
+            <div class="wishes-feed-header">
+              <span class="kinetic-title">Buku Tamu & Ucapan</span>
+              <span id="wishes-count" style="font-size: 0.95rem; color: var(--primary-red); font-weight: 700;"></span>
+            </div>
+            <div id="wishes-list" class="wishes-feed-list">
+              <!-- Rendered via JavaScript -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =======================================================================
+           8. COUNTDOWN & CLOSING SECTION
+           ======================================================================= -->
+      <section id="closing-section">
+        <!-- Cute 3-Tier Wedding Cake Doodle -->
+        <div class="doodle-animated-float" style="margin-bottom: 0.5rem;">
+          <svg style="width: 58px; height: 58px; color: var(--primary-red);" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5">
+            <!-- Candles / Heart on Top -->
+            <path d="M50 15 C45 8, 38 12, 50 20 C62 12, 55 8, 50 15 Z" fill="currentColor"/>
+            <line x1="50" y1="20" x2="50" y2="28" stroke-width="3"/>
+            <!-- Tier 1 -->
+            <rect x="36" y="28" width="28" height="18" rx="3" fill="rgba(158,14,0,0.12)"/>
+            <!-- Tier 2 -->
+            <rect x="26" y="46" width="48" height="20" rx="4" fill="rgba(158,14,0,0.08)"/>
+            <!-- Tier 3 Base -->
+            <rect x="16" y="66" width="68" height="22" rx="4" fill="rgba(158,14,0,0.12)"/>
+            <!-- Dotted decorations -->
+            <circle cx="50" cy="37" r="2" fill="currentColor"/>
+            <circle cx="40" cy="56" r="2" fill="currentColor"/>
+            <circle cx="50" cy="56" r="2" fill="currentColor"/>
+            <circle cx="60" cy="56" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+
+        <div class="section-title kinetic-title">Our Big Day Awaits</div>
+        <div class="section-subtitle kinetic-subtitle">Menuju ikatan janji suci kami</div>
+
+        <!-- Live Countdown Grid -->
+        <div class="countdown-grid scroll-reveal-zoom">
+          <div class="countdown-box">
+            <div id="cd-days" class="countdown-num">00</div>
+            <div class="countdown-label">Hari</div>
+          </div>
+          <div class="countdown-box">
+            <div id="cd-hours" class="countdown-num">00</div>
+            <div class="countdown-label">Jam</div>
+          </div>
+          <div class="countdown-box">
+            <div id="cd-minutes" class="countdown-num">00</div>
+            <div class="countdown-label">Menit</div>
+          </div>
+          <div class="countdown-box">
+            <div id="cd-seconds" class="countdown-num">00</div>
+            <div class="countdown-label">Detik</div>
+          </div>
+        </div>
+
+        <div class="closing-message kinetic-title">
+          see you<br>on 6.6.26
+        </div>
+
+        <div class="closing-names kinetic-title">
+          Julian + Anisa
+        </div>
+
+        <!-- Cute Infinite Pinky Promise Swirl Doodle -->
+        <svg class="scroll-reveal doodle-animated-float" style="width: 130px; height: 35px; margin-bottom: 1.5rem;" viewBox="0 0 130 35" fill="none" stroke="var(--primary-red)" stroke-width="2.5">
+          <path d="M10 18 Q35 5 65 18 T120 18"/>
+          <circle cx="65" cy="18" r="4" fill="var(--primary-red)"/>
+          <path d="M65 18 C65 10, 55 10, 55 14 C55 18, 65 24, 65 24 C65 24, 75 18, 75 14 C75 10, 65 10, 65 18 Z" fill="var(--primary-red)"/>
+        </svg>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <p>Made with ❤️ for <strong>Julian &amp; Anisa Wedding</strong></p>
+        <p style="margin-top: 4px; font-size: 0.75rem;">Hand-Drawing Gen-Z Wedding Invitation</p>
+      </footer>
+
+    </main>
+
+    <!-- Floating Audio Button -->
+    <button type="button" id="floating-music-btn" class="floating-music-btn" style="display: none;" aria-label="Toggle Music">
+      🎵
+    </button>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
